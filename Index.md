@@ -1,6 +1,7 @@
 # kNN on a Board
 
 | Summary      | Describe your assignment in a few sentences here.                                                                                                                 |
+|--------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Topics       | kNN algorithm, machine learning, ovverfitting/underfitting, hyperparameter tuning                                                                                 |
 | Audience     | Introduction to AI, could be adapted to K-12                                                                                                                      |
 | Difficulty   | Describe the perceived assignment difficulty and time needed for the audience to complete the assignment.                                                         |
