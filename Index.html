@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Index</title>
+  <title>index</title>
   <style>
     html {
       color: #1a1a1a;
@@ -12,9 +12,9 @@
     }
     body {
       margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
+      max-width: 70%;
+      padding-left: 10%;
+      padding-right: 10%;
       padding-top: 50px;
       padding-bottom: 50px;
       hyphens: auto;
@@ -115,7 +115,7 @@
     table {
       margin: 1em 0;
       border-collapse: collapse;
-      width: 100%;
+      width: auto;
       overflow-x: auto;
       display: block;
       font-variant-numeric: lining-nums tabular-nums;
@@ -134,6 +134,13 @@
     }
     td {
       padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    tr {
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border: 1px solid #ddd;
     }
     header {
       margin-bottom: 4em;
@@ -175,50 +182,190 @@
 <col style="width: 7%" />
 <col style="width: 92%" />
 </colgroup>
+<tbody>
+<tr class="odd">
+<td>Summary</td>
+<td>This activity allows students to walk through the kNN machine
+learning algorithm in an easily interpretable, 2-dimentional space. The
+data represented on the board visualizes whether users made purchases
+(color) from social media sites and 2 features - age (x axis) and
+estimated salary (y axis). This data is a randomly selected sample from
+the <a
+href="https://www.kaggle.com/datasets/riyakapoor/social-network-ads/">Kaggle
+dataset “social_network_ads”</a>. Students will idtentify the “test
+points” on the graph (in black and labeled A-E) and use the kNN
+algorithm with multiple k values to classify each of the points and
+choose the best k value based on their evaluation critera. They use
+whiteboard markers and rulers to find the nearest neighbors and create
+boundaries in the space. Finally, they connect their understanding of
+overfitting/underfitting to their choice of k value.</td>
+</tr>
+<tr class="even">
+<td>Topics</td>
+<td>kNN algorithm, machine learning, overfitting/underfitting,
+hyperparameter tuning</td>
+</tr>
+<tr class="odd">
+<td>Audience</td>
+<td>Introduction to AI, could be adapted to K-12</td>
+</tr>
+<tr class="even">
+<td>Difficulty</td>
+<td>Easy - given students have the assumed prior knowledge described in
+the Dependencies section. Otherwise, it is recommended that the
+questions be altered to reach students’ level of prior knowledge</td>
+</tr>
+<tr class="odd">
+<td>Strengths</td>
+<td>This activity is unplugged and gives students an opportunity to gain
+an understanding of the kNN algorithm in a no-code environment. It also
+allows students to explore the algorithm in a familar, 2-dimensional
+space and gain understand that can be applied to higher dimensional
+spaces. The activity materials are flexible and could be used to teach
+multiple facets of kNN or other simple algorithms.</td>
+</tr>
+<tr class="even">
+<td>Weaknesses</td>
+<td>As described in the dependencies section, this activity requires
+prior knowledge of some foundational machine learning concepts, as well
+as prior knowledge/instruction on the kNN algorithm. Creating boundaries
+lines at this scale requires approximation, so while creating the lines
+helps students understand the boundaries in space, it is not a perfect
+representation of how those are made in a ML program.</td>
+</tr>
+<tr class="odd">
+<td>Dependencies</td>
+<td>This activity assumes that students have some foundational prior
+knowledge of the following terms in the context of data science: <br />
+    - algorithmic thinking <br />     - classification models <br />    
+- training vs. testing data <br />     - evaluation criteria <br />    
+- overfitting vs. underfitting <br /> Materials required for this
+activity are: <br />     - printed kNN boards (see comments in
+instructor notes about printing) <br />     - dry erase markers or some
+other erasable writing utensil <br />     - rulers</td>
+</tr>
+<tr class="even">
+<td>Variants</td>
+<td>This activity could be adapted to teach concepts like: <br />     -
+<strong>distance metrics</strong>: have students compare classification
+outcomes across various distance metrics (Euclidean distance, Manhattan
+distance, Minkowski Distance, etc) instead of/in addition to k values.
+<br />     - <strong>evlauation metrics</strong>: have students create a
+confusion matrix, calculate accuracy, sensitivity, specificity, etc. for
+each of their k values.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="student-activty">Student Activty</h2>
+<h3 id="knn-on-a-board-1">kNN On a Board</h3>
+<p><strong>General Description:</strong> In this activity we will
+explore the kNN algorithm using a visual representation of purchasing
+data from <a
+href="https://www.kaggle.com/datasets/riyakapoor/social-network-ads/">Kaggle</a>.
+The data contains social network user information including estimated
+salary and age, and whether the user bought a product. We will use the
+kNN algorithm to predict if a new user is likely to purchase a product
+using their salary and age.</p>
+<p><strong>Why am I doing this?</strong> kNN is a common algorithm used
+for classification problems. This lab will allow you to work through the
+algorithm in the same way that the computer does (just on a smaller
+scale) and give you a hands-on understanding of how classifications are
+made in the model.</p>
+<p><strong>What am I going to do?</strong> Using the kNN board, you will
+first identify the 5 points in black. Then, you will classify these
+points as one of two classes: purchased - blue or not purchased -
+orange. Choose 3 k values (must be greater than 1 and odd), find the k
+nearest neighboring points using Euclidean distance – a straight line
+between 2 points and classify the point as purchased or not purchased.
+Record the classification for each point in a table. Then, compare these
+results to the actual class (obtained from your instructor) to pick the
+best k value and answer the questions below.</p>
+<p><strong>Questions</strong></p>
+<ol type="1">
+<li><p>Using what you learned in class about kNN, explain in your own
+words (at a “rubber duck level”) how the kNN model works. Be sure to
+answer the following questions in your explanation: <br />     a. What
+does k represent? <br />     b. How is a prediction made for a new
+observation (one not in the training data set)? <br />     c. In this
+example, is kNN being used for classification or regression? Why? <br />
+    d. Include references (links are fine) to any additional sources you
+use - you may find this <a href="https://www.ibm.com/topics/knn">IBM
+article</a> helpful.</p></li>
+<li><p>Include the table you recorded your classifications in for all 3
+k values you tested for each of the 5 test points.</p></li>
+<li><p>Recommend a value for k based on your observations. Provide a
+rationale for why you chose that value.</p></li>
+<li><p>Using the k value you have chosen, create estimated boundaries
+areas (like the
+{ref}<code>example below &lt;boundarylines-example&gt;</code>). Include
+a picture of the board with the drawn boundaries.</p></li>
+<li><p>Which areas of the graph did kNN do best in? Worst? Why do you
+think this is?</p></li>
+<li><p>Overfitting and underfitting are common issues in machine
+learning. Explain why picking a k value too small overfits your model,
+and a k value too large underfits your model.</p></li>
+</ol>
+<p><strong><em>Insert border image</em></strong></p>
+<p><strong>How will I know I have succeeded?</strong></p>
+<table>
+<colgroup>
+
+</colgroup>
 <thead>
 <tr class="header">
-<th>Summary</th>
-<th>Describe your assignment in a few sentences here.</th>
+<th><strong>Specs Category</strong></th>
+<th><strong>Specs Details</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Topics</td>
-<td>kNN algorithm, machine learning, ovverfitting/underfitting,
-hyperparameter tuning</td>
+<td><strong>Formatting</strong></td>
+<td>- 2 pages max <br /> - PDF format <br /> - Headings <br />   - Lab
+Name <br />   - Your name, course, date <br />   -Questions</td>
 </tr>
 <tr class="even">
-<td>Audience</td>
-<td>Introduction to AI, could be adapted to K-12</td>
-</tr>
-<tr class="odd">
-<td>Difficulty</td>
-<td>Describe the perceived assignment difficulty and time needed for the
-audience to complete the assignment.</td>
-</tr>
-<tr class="even">
-<td>Strengths</td>
-<td>Describe the assignment strengths.</td>
-</tr>
-<tr class="odd">
-<td>Weaknesses</td>
-<td>Describe the assignment weaknesses.</td>
-</tr>
-<tr class="even">
-<td>Dependencies</td>
-<td>This activity assumes that students have some prior knowledge of the
-following terms in the context of data science: <br /> - Algorithmic
-thinking <br /> - classification models <br /> - training vs. testing
-data <br /> - evaluation criteria <br /> - overfitting vs. underfitting
-<br /></td>
-</tr>
-<tr class="odd">
-<td>Variants</td>
-<td>In a few sentences, describe possible ways in which other
-instructors can vary the assignment, learn from its design, and/or
-encourage follow-on assignment work.</td>
+<td><strong>Questions</strong></td>
+<td>- Goal: Explore the kNN algorithm through the guided questions
+<br /> - Detailed responses to the questions that include examples from
+your experience where appropriate <br /> - Completed table for your 3 k
+values <br /> - Image of the graph with your drawn boundary lines <br />
+- Format your responses in a numerical list corresponding to the
+questions list</td>
 </tr>
 </tbody>
 </table>
+<p><strong>Acknowledgements:</strong> Special thanks to Jess Taggart
+from UVA CTE for coaching us. This structure is pulled directly from <a
+href="https://cte.virginia.edu/blog/2020/12/04/alternative-grading-practices-support-both-equity-and-learning">Streifer
+&amp; Palmer (2020)</a>.</p>
+<h2 id="instructor-notes">Instructor Notes</h2>
+<h3 id="materials">Materials</h3>
+<p>This activity is “unplugged” and therefore requires some materials.
+The {ref}<code>kNN board &lt;kNN-board&gt;</code> below can be printed
+in many different formats, but for sustainability of resources it is
+recommended that the image be printed as large as 24” x 36” and
+lamintated. We find using dry erase markers on the laminated surface
+successful for student engagement and longevity of materials.</p>
+<p><strong><em>Insert board image</em></strong></p>
+<h3 id="true-values">True Values</h3>
+<p>We recommend witholding the true values below until students have
+made a classification for each of their k values. Often this results in
+a teachable moment where they do not have the true values, and will
+struggle to determine which k is best with missing information. This
+productive struggle raises questions and creates a memorable connection
+to the process for students.</p>
+<p><br /><strong>Point A:</strong> Purchased (Blue) <br /> <strong>Point
+B:</strong> Not Purchased (Orange) <br /> <strong>Point C:</strong> Not
+Purchased (Orange) <br /> <strong>Point D:</strong> Purchased (Blue)
+<br /> <strong>Point E:</strong> Purchased (Blue)</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a
+href="https://www.kaggle.com/datasets/riyakapoor/social-network-ads/">Data
+from Kaggle</a></li>
+<li><a
+href="https://myuva-my.sharepoint.com/:b:/g/personal/wat6sv_virginia_edu/Ebv9Jy5MH35MlXmgL4gT7NoBCq56Ag-Lu6HHzy5SiR4KtA?e=LIDJn3">kNN
+board (.pdf)</a></li>
+</ul>
 </body>
 </html>
