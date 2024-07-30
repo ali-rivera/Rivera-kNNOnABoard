@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>index</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 70%;
+      padding-left: 10%;
+      padding-right: 10%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    tr {
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border: 1px solid #ddd;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="knn-on-a-board">kNN on a Board</h1>
+<table>
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 92%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Summary</strong></td>
+<td>This activity allows students to walk through the k Nearest Neighbor
+(kNN) machine learning algorithm, a classic first model learned in
+machine learning, in an easily interpretable, physical space printed
+onto whiteboards. Using dry erase markers, students walk through kNN,
+performing the various tasks associated with classifying test points,
+tuning the hyperparameter, and creating boundaries in space using the
+data on the board. Then, they respond to questions that require them to
+communicate their processes and connect their understanding of
+overfitting/underfitting to their choice of k value.</td>
+</tr>
+<tr class="even">
+<td><strong>Topics</strong></td>
+<td>kNN algorithm, machine learning, overfitting/underfitting,
+hyperparameter tuning</td>
+</tr>
+<tr class="odd">
+<td><strong>Audience</strong></td>
+<td>Introduction to AI, could be adapted to K-12</td>
+</tr>
+<tr class="even">
+<td><strong>Difficulty</strong></td>
+<td>Easy - given students have the assumed prior knowledge described in
+the Dependencies section. Otherwise, it is recommended that the
+questions be altered to reach students’ level of prior knowledge</td>
+</tr>
+<tr class="odd">
+<td><strong>Strengths</strong></td>
+<td>This activity is unplugged and gives students an opportunity to gain
+an understanding of the kNN algorithm in a no-code environment. This
+activity allows students to explore the algorithm in a familiar,
+physical space and gain understanding that can be applied when
+implementing the algorithm in a code environment. It also connects
+hyperparameter/algorithm tuning to performance visually, rather than
+numerically, as it is usually seen when implementing kNN in a virtual
+environment. The activity materials are flexible and could be used to
+teach multiple facets of kNN and other simple algorithms.</td>
+</tr>
+<tr class="even">
+<td><strong>Weaknesses</strong></td>
+<td>As described in the dependencies section, this activity requires
+some prior knowledge of foundational machine learning concepts, as well
+as some prior knowledge/instruction on the kNN algorithm. We have
+included slides that can be used to introduce these concepts in the
+Resources section of the materials below. Additionally, creating
+boundaries lines at this scale requires approximation, so while creating
+the lines helps students understand the boundaries in space, it is not a
+perfect representation of how those are made in a ML program.</td>
+</tr>
+<tr class="odd">
+<td><strong>Dependencies</strong></td>
+<td>This activity assumes that students have some foundational prior
+knowledge of the following terms in the context of data science: <br /> 
+  - kNN algorithm <br />     - classification <br />     - training
+vs. testing data <br />     - evaluation criteria <br />     -
+overfitting vs. underfitting <br /> Materials required for this activity
+are: <br />     - printed kNN boards (see comments in instructor notes
+about printing) <br />     - dry erase markers or some other erasable
+writing utensil <br />     - rulers</td>
+</tr>
+<tr class="even">
+<td><strong>Variants</strong></td>
+<td>This activity could be adapted to teach concepts like: <br />    -
+<strong>distance metrics</strong> : have students compare classification
+outcomes across various distance metrics (Euclidean distance, Manhattan
+distance, Minkowski Distance, etc) instead of/in addition to k values.
+<br />   - <strong>probability</strong>: have students create
+probability distributions for various k values, demonstrating how
+increasing/decreasing k affects model fit <br />    - <strong>evaluation
+metrics</strong>: have students create a confusion matrix, calculate
+accuracy, sensitivity, specificity, etc. for each of their k
+values.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="student-activity">Student Activity</h2>
+<h3 id="knn-on-a-board-1">kNN On a Board</h3>
+<p><strong>General Description:</strong> In this activity we will
+explore the kNN algorithm using a visual representation of purchasing
+data from <a
+href="https://www.kaggle.com/datasets/riyakapoor/social-network-ads/">Kaggle</a>.
+The data contains social network user information including estimated
+salary and age, and whether the user bought a product. We will use the
+kNN algorithm to predict if a new user is likely to purchase a product
+using their salary and age.</p>
+<p><strong>Why am I doing this?</strong> kNN is a common algorithm used
+for classification problems. This lab will allow you to work through the
+algorithm in the same way that the computer does (just on a smaller
+scale) and give you a hands-on understanding of how classifications are
+made in the model.</p>
+<p><strong>What am I going to do?</strong> Using the kNN board, you will
+first identify the 5 points in black. Then, you will classify these
+points as one of two classes: purchased - blue or not purchased -
+orange. Choose 3 k values (must be greater than 1 and odd), find the k
+nearest neighboring points using Euclidean distance – a straight line
+between 2 points and classify the point as purchased or not purchased.
+Record the classification for each point in a table. Then, compare these
+results to the actual class (obtained from your instructor) to pick the
+best k value and answer the questions below.</p>
+<p><strong>Questions</strong></p>
+<ol type="1">
+<li><p>Using what you learned in class about kNN, explain in your own
+words (at a “rubber duck level”) how the kNN model works. Be sure to
+answer the following questions in your explanation: <br />     a. What
+does k represent? <br />     b. How is a prediction made for a new
+observation (one not in the training data set)? <br />     c. In this
+example, is kNN being used for classification or regression? Why? <br />
+    d. Include references (links are fine) to any additional sources you
+use - you may find this <a href="https://www.ibm.com/topics/knn">IBM
+article</a> helpful.</p></li>
+<li><p>Include the table you recorded your classifications in for all 3
+k values you tested for each of the 5 test points.</p></li>
+<li><p>Recommend a value for k based on your observations. Provide a
+rationale for why you chose that value.</p></li>
+<li><p>Using the k value you have chosen, create estimated boundaries
+areas (like the example below). Include a picture of the board with the
+drawn boundaries.</p></li>
+<li><p>Which areas of the graph did kNN do best in? Worst? Why do you
+think this is?</p></li>
+<li><p>Overfitting and underfitting are common issues in machine
+learning. Explain why picking a k value too small overfits your model,
+and a k value too large underfits your model.</p></li>
+<li><p><em>Bonus Question</em>: In a table, calculate the probability
+associated with your classification prediction for each point at each k
+value.</p></li>
+</ol>
+<img src="image.png" alt="Left: 2-dimensional area with boundaries added for k=1, Right: 2-dimentional area with boundaries added for k=15">
+<p><strong>How will I know I have succeeded?</strong></p>
+<table>
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Specs Category</strong></th>
+<th><strong>Specs Details</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Formatting</strong></td>
+<td>- 2 pages max <br /> - PDF format <br /> - Headings <br />   - Lab
+Name <br />   - Your name, course, date <br />   -Questions</td>
+</tr>
+<tr class="even">
+<td><strong>Questions</strong></td>
+<td>- Goal: Explore the kNN algorithm through the guided questions
+<br /> - Detailed responses to the questions that include examples from
+your experience where appropriate <br /> - Completed table for your 3 k
+values <br /> - Image of the graph with your drawn boundary lines <br />
+- Format your responses in a numerical list corresponding to the
+questions list</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Acknowledgements:</strong> Special thanks to Jess Taggart
+from UVA CTE for coaching us. This structure is pulled directly from <a
+href="https://cte.virginia.edu/blog/2020/12/04/alternative-grading-practices-support-both-equity-and-learning">Streifer
+&amp; Palmer (2020)</a>.</p>
+<h2 id="instructor-notes">Instructor Notes</h2>
+<h3 id="materials">Materials</h3>
+<p>This activity is “unplugged” and therefore requires some materials.
+The kNN board below can be printed in many different formats, but for
+sustainability of resources it is recommended that the image be printed
+as large as 24” x 36” and laminated. We find using dry erase markers on
+the laminated surface successful for student engagement and longevity of
+materials.</p>
+<img src="kNN_output.png" alt="A scatter plot titled Purchases Made from Social Media with age on the x-axis and estimated salarie on the y-axis. Points are encoded with orange (Not Purchased) or blue (Purchased). 5 black points are randomly scattered and labled A-E.">
+<h3 id="true-values">True Values</h3>
+<p>We recommend witholding the true values below until students have
+made a classification for each of their k values. Often this results in
+a teachable moment where they do not have the true values, and will
+struggle to determine which k is best with missing information. This
+productive struggle raises questions and creates a memorable connection
+to the process for students.</p>
+<p><br /> <strong>Point A:</strong> Purchased (Blue) <br />
+<strong>Point B:</strong> Not Purchased (Orange) <br /> <strong>Point
+C:</strong> Not Purchased (Orange) <br /> <strong>Point D:</strong>
+Purchased (Blue) <br /> <strong>Point E:</strong> Purchased (Blue)</p>
+<h3 id="follow-up-questions">Follow Up Questions</h3>
+<p>We have included warm-up questions for instructors to use in the
+instructional period following this activity to guide recall and extend
+the concepts explored in the lab.</p>
+<ol type="1">
+<li><p>What are the steps involved in kNN?</p></li>
+<li><p>As k increases, does the model overfit or underfit? Why?</p></li>
+<li><p>Give an example of another situation where kNN could be
+used.</p></li>
+<li><p>Why is kNN considered a “lazy” algorithm?</p></li>
+</ol>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a
+href="https://www.kaggle.com/datasets/riyakapoor/social-network-ads/">Data
+from Kaggle</a></li>
+<li><a
+href="https://myuva-my.sharepoint.com/:b:/g/personal/wat6sv_virginia_edu/Ebv9Jy5MH35MlXmgL4gT7NoBCq56Ag-Lu6HHzy5SiR4KtA?e=LIDJn3">kNN
+board (.pdf)</a></li>
+<li>slides from Brian</li>
+</ul>
+</body>
+</html>
