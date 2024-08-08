@@ -7,29 +7,33 @@
   <title>index</title>
   <style>
     html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
+      color: #10181f;
+      background-color: #eff2f8;
     }
     body {
       margin: 0 auto;
-      max-width: 70%;
+      max-width: 50%;
       padding-left: 10%;
       padding-right: 10%;
-      padding-top: 50px;
-      padding-bottom: 50px;
+      padding-top: 5%;
+      padding-bottom: 5%;
       hyphens: auto;
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
+      font-family: sans-serif;
     }
     @media (max-width: 600px) {
       body {
-        font-size: 0.9em;
+        font-size: 12pt;
         padding: 12px;
       }
       h1 {
-        font-size: 1.8em;
-        text-align: "center";
+        font-size: 48pt;
+      }
+      h2 {
+        font-size: 20pt;
+        color: #e57200;
       }
     }
     @media print {
@@ -38,7 +42,8 @@
       }
       body {
         background-color: transparent;
-        color: black;
+        color: #10181f;
+        font-family: sans-serif;
         font-size: 12pt;
       }
       p, h2, h3 {
@@ -49,23 +54,50 @@
         page-break-after: avoid;
       }
     }
-    .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 25%;
+    h1 {
+        font-size: 32pt;
+        color: #10181f;
+    }
+    h2 {
+        font-size: 16pt;
+        color: #e57200;
     }
     p {
       margin: 1em 0;
+      color: #10181f;
     }
     a {
-      color: #1a1a1a;
+      color: #10181f;
     }
-    a:visited {
-      color: #1a1a1a;
+    a.link { 
+      color: #10181f; 
+      text-decoration: none; 
+      font-weight: bold; 
+    }
+    a.link:hover { 
+      color: #e57200; 
+      text-decoration: none; 
+      font-weight: none; 
     }
     img {
       max-width: 100%;
+      display: block;
+    }
+    img.top{
+      max-width: 250px;
+    }
+    .image-container {
+    display: grid;
+    grid-template-columns: auto auto; 
+    justify-content: center;          
+    align-items: center;               
+    gap: 100px;                  
+    }
+    .icon {
+    background-color: #10181f;
+    }
+    .icon:hover {
+    background-color:#e57200;
     }
     svg {
       height: auto;
@@ -73,7 +105,6 @@
     }
     h1, h2, h3, h4, h5, h6 {
       margin-top: 1.4em;
-      text-align: "center";
     }
     h5, h6 {
       font-size: 1em;
@@ -133,6 +164,32 @@
     }
     tbody {
       margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    tbody.bottom {
+      margin-top: 0.5em;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+    tr.main {
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      border: 1px solid #ddd;
+    }
+    tr.top {
+      border-bottom: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+      justify-content: center; /* Horizontally center */
+      align-items: center;     /* Vertically center */
+      display: grid; 
+      
+    }
+    tr.bottom {
+      border-bottom: 0px solid #ddd;
+      border-top: 0px solid #ddd;
     }
     th {
       border-top: 1px solid #1a1a1a;
@@ -140,23 +197,18 @@
     }
     td {
       padding: 0.125em 0.5em 0.25em 0.5em;
+      font-size: 12pt;
     }
-    table.header{
-      border-left: 1px solid #ddd;
-      border-right: 1px solid #ddd;
-      border-bottom: 0px solid #ddd;
-      border-top: 0px solid #ddd;
+    td.top {
+
     }
-    tr {
-      border-bottom: 1px solid #ddd;
-      border-top: 1px solid #ddd;
-      border-left: 1px solid #ddd;
-      border-right: 1px solid #ddd;
-      border: 1px solid #ddd;
+    td.left {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+      vertical-align: top;
     }
     header {
       margin-bottom: 4em;
-      text-align: "center";
+      text-align: center;
     }
     #TOC li {
       list-style: none;
@@ -187,29 +239,26 @@
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
 </head>
-<body>
-<h1 id="knn-on-a-board">kNN on a Board1</h1>
-<table class="header">
-  <colgroup>
-  <col style="width: 40%" />
-  <col style="width: 60%" />
-  </colgroup>
-  <tbody>
-    <td><div style="text-align: center; font-size:25px">An unplugged kNN introductory activity for Data Science Students</div></td>
-<td><div style="text-align: center;">
-  <img src="kNN-class.jpg" width="25%" alt="An image of 3 students in a data science active learning classroom. They are smiling and holding up a whiteboard with points on it and annotations from the activity they just completed."> <br /><br />
-  </div></td>
-  </tbody>
-  </table>
 
-<table>
+<body>
+<h1 id="knn-on-a-board">kNN on a Board</h1>
+<span style="font-size: 16pt;"><strong><a class = "link" href="https://datascience.virginia.edu/people/ali-rivera">Ali Rivera</a></strong></span><span style="font-size: 12pt;"><br />Data Scientist</span> <br />
+<span style="font-size: 16pt;"><strong><a class = "link" href="https://datascience.virginia.edu/people/brian-wright">Brian Wright</a></strong></span><span style="font-size: 12pt;"><br />Quantitative Foundation Associate Professor of Data Science, Director of Undergraduate Programs</span> <br />
+<span style="font-size: 16pt;"><strong><a class = "link" href="https://datascience.virginia.edu/people/peter-alonzi">Peter Alonzi</a></strong></span><span style="font-size: 12pt;"><br />Assistant Professor of Data Science</span> <br />
+
+<div class="image-container">
+  <a href="https://datascience.virginia.edu/"> <img class="top" src="SDS V Logo Color-Screen.png" alt="University of Virginia School of Data Science logo features an orange rotunda and blue text." ></a>
+  <img class="top" src="kNN-class.jpg" alt="An image of 3 female students in a data science active learning classroom. They are smiling and holding up a whiteboard with points on it and annotations from the activity they just completed.">
+</div>
+<h2>Activity</h2>
+  <table>
 <colgroup>
 <col style="width: 7%" />
 <col style="width: 92%" />
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><strong>Summary</strong></td>
+<td class = "left"><strong>Summary</strong></td>
 <td>This activity allows students to walk through the k Nearest Neighbor
 (kNN) machine learning algorithm, a classic first model learned in
 machine learning, in an easily interpretable, physical space printed
@@ -220,35 +269,50 @@ data on the board. Then, they respond to questions that require them to
 communicate their processes and connect their understanding of
 overfitting/underfitting to their choice of k value.</td>
 </tr>
+<tr class="odd">
+  <td><br /></td>
+  </tr>
 <tr class="even">
-<td><strong>Topics</strong></td>
+<td class = "left"><strong>Topics</strong></td>
 <td>kNN algorithm, machine learning, overfitting/underfitting,
 hyperparameter tuning</td>
 </tr>
 <tr class="odd">
-<td><strong>Audience</strong></td>
+  <td><br /></td>
+  </tr>
+<tr class="odd">
+<td class = "left"><strong>Audience</strong></td>
 <td>Introduction to AI, could be adapted to K-12</td>
 </tr>
+<tr class="odd">
+  <td><br /></td>
+  </tr>
 <tr class="even">
-<td><strong>Difficulty</strong></td>
+<td class = "left"><strong>Difficulty</strong></td>
 <td>Easy - given students have the assumed prior knowledge described in
 the Dependencies section. Otherwise, it is recommended that the
 questions be altered to reach students’ level of prior knowledge</td>
 </tr>
 <tr class="odd">
-<td><strong>Strengths</strong></td>
+  <td><br /></td>
+  </tr>
+<tr class="odd">
+<td class = "left"><strong>Strengths</strong></td>
 <td>This activity is unplugged and gives students an opportunity to gain
 an understanding of the kNN algorithm in a no-code environment. This
 activity allows students to explore the algorithm in a familiar,
 physical space and gain understanding that can be applied when
 implementing the algorithm in a code environment. It also connects
 hyperparameter/algorithm tuning to performance visually, rather than
-numerically, as it is usually seen when implementing kNN in a computational 
+numerically, as it is usually seen when implementing kNN in a virtual
 environment. The activity materials are flexible and could be used to
 teach multiple facets of kNN and other simple algorithms.</td>
 </tr>
+<tr class="odd">
+  <td><br /></td>
+  </tr>
 <tr class="even">
-<td><strong>Weaknesses</strong></td>
+<td class = "left"><strong>Weaknesses</strong></td>
 <td>As described in the dependencies section, this activity requires
 some prior knowledge of foundational machine learning concepts, as well
 as some prior knowledge/instruction on the kNN algorithm. We have
@@ -259,33 +323,88 @@ the lines helps students understand the boundaries in space, it is not a
 perfect representation of how those are made in a ML program.</td>
 </tr>
 <tr class="odd">
-<td><strong>Dependencies</strong></td>
+  <td><br /></td>
+  </tr>
+<tr class="odd">
+<td class = "left"><strong>Dependencies</strong></td>
 <td>This activity assumes that students have some foundational prior
-knowledge of the following terms in the context of data science: <br /> 
-  - kNN algorithm <br />     - classification <br />     - training
-vs. testing data <br />     - evaluation criteria <br />     -
-overfitting vs. underfitting <br /> Materials required for this activity
-are: <br />     - printed kNN boards (see comments in instructor notes
-about printing) <br />     - dry erase markers or some other erasable
-writing utensil <br />     - rulers</td>
+knowledge of the following terms in the context of data science:
+<ul>
+  <li>kNN algorithm </li>
+  <li>classification </li>
+  <li>training vs. testing data </li>
+  <li>evaluation criteria </li>
+  <li>overfitting vs. underfitting </li>
+</ul>
+Materials required for this activity
+are: 
+<ul>
+  <li>printed kNN boards (see comments in instructor notes about printing) </li>
+  <li>dry erase markers or some other erasable writing utensil </li>
+  <li>rulers </li>
+</ul>
+</td>
 </tr>
+<tr class="odd">
+  <td><br /></td>
+  </tr>
 <tr class="even">
-<td><strong>Variants</strong></td>
-<td>This activity could be adapted to teach concepts like: <br />    -
-<strong>distance metrics</strong> : have students compare classification
-outcomes across various distance metrics (Euclidean distance, Manhattan
-distance, Minkowski Distance, etc) instead of/in addition to k values.
-<br />   - <strong>probability</strong>: have students create the predicted probabilities for the test set for various k values, demonstrating how
-increasing/decreasing k affects model fit <br />    - <strong>evaluation
-metrics</strong>: have students create a confusion matrix, calculate
-accuracy, sensitivity, specificity, etc. for each of their k
-values.</td>
+<td class = "left"><strong>Variants</strong></td>
+<td>This activity could be adapted to teach concepts like:
+  <ul>
+    <li><strong>distance metrics</strong>: have students compare classification
+      outcomes across various distance metrics (Euclidean distance, Manhattan
+      distance, Minkowski Distance, etc) instead of/in addition to k values.</li>
+    <li><strong>probability</strong>: have students create
+      probability distributions for various k values, demonstrating how
+      increasing/decreasing k affects model fit</li>
+    <li><strong>evaluation
+      metrics</strong>: have students create a confusion matrix, calculate
+      accuracy, sensitivity, specificity, etc. for each of their k
+      values.</li>
+  </ul>
+</td>
 </tr>
 </tbody>
 </table>
-<a href="student-activity.html">Student Activity</a> <br />
-<a href="instructor-notes.html">Instructor Resources & Notes</a><br />
-<a href="kNN_output.pdf">kNN board</a><br />
-</ul>
+<h2>Materials</h2>
+<table >
+  <colgroup>
+  <col style="width: 10%" />
+  <col style="width: 92%" />
+  </colgroup>
+  <tbody class="bottom">
+  <tr>
+  <td class = "left"><div class="icon"><a class="link" href="student-activity.html">
+    <img  src="big-file.png" width = 100% alt="go to student activity page" ></a></div></td>
+  <td><strong>Student activity</strong> <br> 
+    The information that students are given - can be used as a digital or print hand-out. This contains the assignment description, instructions, questions, and rubric. <br></td>
+  </tr>
+  <tr>
+    <td class = "left"><div class="icon"><a class="link" href="instructor-notes.html">
+      <img src="big-file.png" width = 100% alt="go to instructor notes and resources page" ></a></div></td>
+    <td><strong>Instructor Resources & Notes</strong> <br> 
+    Additional information for instructors including commentary, true values for test points, slides for introducing dependent concepts, and follow up questions.<br></td>
+  </tr>
+  <tr>
+  <td class = "left"><div class="icon"><a href="student-activity.html">
+    <img  src="big-download.png" width = 100% alt="download kNN board" ></a></div></td>
+  <td><strong>kNN Board</strong> <br> 
+      A PDF of the Board used in the activity. See Instructor Resources and Notes for notes on printing.<br></td>
+  </tr>
+  <td class = "left"><div class="icon"><a href="">
+    <img  src="slides.png" width = 100% alt="Link to presentation for dependencies" ></a></div></td>
+  <td><strong>Introductory Slides</strong> <br> 
+      A link to slides we recommend to introduce the topic outlined in the Dependencies section.<br></td>
+  </tr>
+  <td class = "left"><div class="icon"><a href="https://www.kaggle.com/datasets/riyakapoor/social-network-ads/">
+    <img  src="data.png" width = 100% alt="Kaggle page with original data" ></a></div></td>
+  <td><strong>Data from Kaggle</strong> <br> 
+      The link to the original data source on Kaggle.com<br></td>
+  </tr>
+  </tbody>
+</table>
+
+
 </body>
 </html>
