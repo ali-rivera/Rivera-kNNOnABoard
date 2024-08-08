@@ -12,7 +12,7 @@
     }
     body {
       margin: 0 auto;
-      max-width: 40%;
+      max-width: 60%;
       padding-left: 10%;
       padding-right: 10%;
       padding-top: 5%;
@@ -80,10 +80,20 @@
     }
     img {
       max-width: 100%;
+      display: block;
+    }
+    img.top{
+      max-width: 250px;
+    }
+    .image-container {
+    display: grid;
+    grid-template-columns: auto auto; 
+    justify-content: center;          
+    align-items: center;               
+    gap: 100px;                  
     }
     .icon {
-    position: absolute;
-    background-color: #10181f; 
+    background-color: #10181f;
     }
     .icon:hover {
     background-color:#e57200;
@@ -171,7 +181,10 @@
     tr.top {
       border-bottom: 1px solid #ddd;
       border-top: 1px solid #ddd;
-      width: 60%;
+      justify-content: center; /* Horizontally center */
+      align-items: center;     /* Vertically center */
+      display: grid; 
+      
     }
     tr.bottom {
       border-bottom: 0px solid #ddd;
@@ -184,6 +197,9 @@
     td {
       padding: 0.125em 0.5em 0.25em 0.5em;
       font-size: 12pt;
+    }
+    td.top {
+
     }
     td.left {
       padding: 0.125em 0.5em 0.25em 0.5em;
@@ -228,19 +244,11 @@
 <span style="font-size: 16pt;"><strong><a class = "link" href="https://datascience.virginia.edu/people/ali-rivera">Ali Rivera</a></strong></span><span style="font-size: 12pt;"><br />Data Scientist</span> <br />
 <span style="font-size: 16pt;"><strong><a class = "link" href="https://datascience.virginia.edu/people/brian-wright">Brian Wright</a></strong></span><span style="font-size: 12pt;"><br />Quantitative Foundation Associate Professor of Data Science, Director of Undergraduate Programs</span> <br />
 <span style="font-size: 16pt;"><strong><a class = "link" href="https://datascience.virginia.edu/people/peter-alonzi">Peter Alonzi</a></strong></span><span style="font-size: 12pt;"><br />Assistant Professor of Data Science</span> <br />
-<table>
-  <colgroup>
-  <col style="width: 50%" />
-  <col style="width: 50%" />
-  </colgroup>
-  <tbody>
-    <tr class="top"><td><div style="text-align: center;"><a href="https://datascience.virginia.edu/">
-      <img src="SDS V Logo Color-Screen.png" width = 60% alt="University of Virginia School of Data Science logo features an orange rotunda and blue text." ></a></div></td>
-<td><div style="text-align: center;">
-  <img src="kNN-class.jpg" width="50%" alt="An image of 3 female students in a data science active learning classroom. They are smiling and holding up a whiteboard with points on it and annotations from the activity they just completed.">
-  </div></td></tr>
-  </tbody>
-  </table>
+
+<div class="image-container">
+  <a href="https://datascience.virginia.edu/"> <img class="top" src="SDS V Logo Color-Screen.png" alt="University of Virginia School of Data Science logo features an orange rotunda and blue text." ></a>
+  <img class="top" src="kNN-class.jpg" alt="An image of 3 female students in a data science active learning classroom. They are smiling and holding up a whiteboard with points on it and annotations from the activity they just completed.">
+</div>
 <h2>Activity</h2>
   <table>
 <colgroup>
@@ -361,25 +369,25 @@ are:
 <h2>Materials</h2>
 <table >
   <colgroup>
-  <col style="width: 7%" />
+  <col style="width: 15%" />
   <col style="width: 92%" />
   </colgroup>
   <tbody class="bottom">
   <tr>
   <td class = "left"><div class="icon"><a class="link" href="student-activity.html">
-    <img src="big-file.png" width = 100% alt="" ></a></div></td>
+    <img src="big-file.png" width = 100% alt="go to student activity page" ></a></div></td>
   <td><strong>Student activity</strong> <br> 
     The information that students are given - can be used as a digital or print hand-out. This contains the assignment description, instructions, questions, and rubric. <br></td>
   </tr>
   <tr>
     <td class = "left"><div class="icon"><a class="link" href="instructor-notes.html">
-      <img src="big-file.png" width = 100% alt="" ></a></div></td>
+      <img src="big-file.png" width = 100% alt="go to instructor notes and resources page" ></a></div></td>
     <td><strong>Instructor Resources & Notes</strong> <br> 
     Additional information for instructors including commentary, true values for test points, slides for introducing dependent concepts, and follow up questions.<br></td>
   </tr>
   <tr>
   <td class = "left"><div class="icon"><a href="student-activity.html">
-    <img src="big-download.png" width = 100% alt="" ></a></div></td>
+    <img src="big-download.png" width = 100% alt="download kNN board" ></a></div></td>
   <td><strong>kNN Board</strong> <br> 
       A PDF of the Board used in the activity. See Instructor Resources and Notes for notes on printing.<br></td>
   </tr>
