@@ -84,7 +84,7 @@
       display: block;
     }
     img.top{
-      max-width: 250px;
+      max-width: 800px;
     }
     .image-container {
     display: grid;
@@ -92,6 +92,12 @@
     justify-content: center;          
     align-items: center;               
     gap: 100px;                  
+    }
+    .image-container-top {
+    display: grid;
+    grid-template-columns: auto; 
+    justify-content: center;          
+    align-items: center;                               
     }
     .icon {
     background-color: #10181f;
@@ -245,10 +251,14 @@
 <p>This activity is “unplugged” and therefore requires some materials.
 The kNN board below can be printed in many different formats, but for
 sustainability of resources it is recommended that the image be printed
-as large as 24” x 36” and laminated. We find using dry erase markers on
+as large as 24” x 36” on foam board and laminated.  We find using dry erase markers on
 the laminated surface successful for student engagement and longevity of
 materials.</p>
-<img src="kNN_output.png" alt="A scatter plot titled Purchases Made from Social Media with age on the x-axis and estimated salarie on the y-axis. Points are encoded with orange (Not Purchased) or blue (Purchased). 5 black points are randomly scattered and labled A-E.">
+
+<div class="image-container-top">
+<img class="top" src="kNN_output.png" alt="A scatter plot titled Purchases Made from Social Media with age on the x-axis and estimated salarie on the y-axis. Points are encoded with orange (Not Purchased) or blue (Purchased). 5 black points are randomly scattered and labled A-E.">
+</div>
+
 <h2 id="true-values">True Values</h2>
 <p>We recommend witholding the true values below until students have
 made a classification for each of their k values. Often this results in

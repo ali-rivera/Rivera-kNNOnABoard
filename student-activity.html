@@ -83,15 +83,18 @@
       max-width: 100%;
       display: block;
     }
-    img.top{
-      max-width: 250px;
-    }
     .image-container {
     display: grid;
     grid-template-columns: auto auto; 
     justify-content: center;          
     align-items: center;               
     gap: 100px;                  
+    }
+    .image-container-top {
+    display: grid;
+    grid-template-columns: auto; 
+    justify-content: center;          
+    align-items: center;                               
     }
     .icon {
     background-color: #10181f;
@@ -291,12 +294,15 @@ and a k value too large underfits your model.</p></li>
 associated with your classification prediction for each point at each k
 value.</p></li>
 </ol>
+
+<div class="image-container-top">
 <img src="image.png" alt="Left: 2-dimensional area with boundaries added for k=1, Right: 2-dimentional area with boundaries added for k=15">
+</div>
 <h2>How will I know I have succeeded?</h2>
 <table>
 <colgroup>
-<col style="width: 51%" />
-<col style="width: 48%" />
+<col style="width: 10%" />
+<col style="width: 50%" />
 </colgroup>
 <thead>
 <tr class="header">
